@@ -565,6 +565,24 @@ public class ColorPicker extends View {
 		}
         setNewCenterColor(color);
 	}
+	
+	/**
+	 * Get the current angle.
+	 * 
+	 * @return The angle in radians.
+	 */
+	public float getAngle() {
+		return mAngle;
+	}
+	
+	/**
+	 * Set the angle and update color.
+	 */
+	public void setAngle(float angle) {
+		mAngle = angle;
+		int color = calculateColor(angle);
+		setColor(color);		
+	}
 
 	/**
 	 * Convert a color to an angle.
